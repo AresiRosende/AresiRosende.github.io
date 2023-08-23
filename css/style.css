@@ -71,6 +71,7 @@ h2 {
 }
 .front-page-text hr {
     height: 1px;
+    border: 1px solid white;
 }
 
 /*
@@ -80,13 +81,6 @@ h2 {
 */
 .about-me {
     height: 100vh;
-    background-color: rgba(0,0,0,0.4);
-}
-.about-me h2 {
-    color: white;
-}
-.about-me hr {
-    border: 1px solid white;
 }
 .about-me-disp {
     display: flex;
@@ -104,7 +98,6 @@ h2 {
 }
 .bio p{
     font-size: 2em;
-    color: rgb(255, 255, 255);
 }
 .misc {
     display: grid;
