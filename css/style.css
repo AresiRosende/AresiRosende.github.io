@@ -1,0 +1,244 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@1,300&display=swap');
+
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+*::-webkit-scrollbar {
+    display: none;
+}
+  
+  /* Hide scrollbar for IE, Edge and Firefox */
+* {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+
+* {
+    font-family: 'Lato', sans-serif;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+::-moz-selection{
+    color: red;
+    background: none;
+}
+::selection{
+    color: red;
+    background: none;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+}
+
+.container{
+    flex: 1;
+}
+
+hr {
+    width: 30vw;
+    margin: auto;
+    border: 1px solid black;
+}
+h2 {
+    font-size: 3em;
+    text-align: center;
+    padding: 20px 0 6px 0;
+}
+
+/*
+--------------------
+    Front page
+--------------------
+*/
+.front-page-disp{
+    width: 100vw;
+    height: 100vh;
+    background-image: url("/media/DSC_0441-01.jpeg");
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.front-page-text {
+    text-align: center;
+    font-size: 3em;
+    color: white;
+}
+.front-page-text hr {
+    height: 1px;
+}
+
+/*
+--------------------
+    About me
+--------------------
+*/
+.about-me {
+    height: 100vh;
+    background-color: rgba(0,0,0,0.4);
+}
+.about-me h2 {
+    color: white;
+}
+.about-me hr {
+    border: 1px solid white;
+}
+.about-me-disp {
+    display: flex;
+    margin: 4em 0 0 0 ;
+    align-items: center;
+}
+
+.pic {
+    margin: 0 2em;
+    max-width: 33%;
+    height: 100%;
+}
+.bio {
+    margin: 5em 2em 0 2em ;
+}
+.bio p{
+    font-size: 2em;
+    color: rgb(255, 255, 255);
+}
+.misc {
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+    justify-content: center;
+    margin: 0 0 0 2em;
+}
+.misc .card {
+    margin: 0 2em;
+}
+.misc .card .slide{
+    border-radius: 1em;
+    width: 100%;
+    height: 150px;
+    transition: 0.5s;
+}
+.misc .card .slide.slide1 {
+    color: white;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    transition: .7s;
+    transform: translateY(75px);
+    background: #000000;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.3);
+}
+.misc .card:hover .slide.slide1{
+    border-radius: 1em 1em 0 0;
+    transform: translateY(0px);
+}
+.misc .card .slide.slide2 {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box;
+    transition: .8s;
+    transform: translateY(-75px);
+    background-color: white;
+}
+.misc .card:hover .slide.slide2{
+    border-radius: 0 0 1em 1em;
+    transform: translateY(0);
+    box-shadow: 0 5px 10px rgba(0,0,0,0.4);
+}
+.content {
+    text-align: center;
+}
+.content h2{
+    margin: 0;
+}
+.content a{
+    text-decoration: none;
+    color: black;
+    font-weight: 700;
+}
+.content a:hover {
+    text-decoration: underline;
+}
+/*
+--------------------
+    Skills
+--------------------
+*/
+.skills {
+    align-items: center;
+}
+
+.logos-container {
+    margin: 2em 0;
+    display: inline-grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    grid-template-rows: 50% 50%;
+}
+.logo {
+    margin: auto;
+    display: flex;
+    max-width: 50%;
+    max-height: 50%;
+}
+/*
+--------------------
+    Footer
+--------------------
+*/
+.ft hr {
+    height: 1px;
+}
+.ft h3 {
+    margin: 1em;
+    text-align: center;
+    font-weight: 200;
+    font-size: 1rem;
+    color: rgba(255,255,255,0.4);
+}
+.social-list {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+}
+.social-list li {
+    margin: 0.5rem;
+    font-size: 2rem;
+}
+footer {
+    background-color: black;
+    color: white;
+    line-height: 1.5;
+}
+footer a {
+    text-decoration: none;
+    color: white;
+}
+
+
+/*
+---------
+Media queries
+---------
+*/
+
+
+
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {...}
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {...}
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {...}
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {...}
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {...}
