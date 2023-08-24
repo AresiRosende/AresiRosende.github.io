@@ -5,18 +5,10 @@
 *::-webkit-scrollbar {
     display: none;
 }
-  
   /* Hide scrollbar for IE, Edge and Firefox */
 * {
     -ms-overflow-style: none;  /* IE and Edge */
     scrollbar-width: none;  /* Firefox */
-}
-
-* {
-    font-family: 'Lato', sans-serif;
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
 }
 ::-moz-selection{
     color: red;
@@ -27,10 +19,21 @@
     background: none;
 }
 
+
+
+* {
+    font-family: 'Lato', sans-serif;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
 body{
     display: flex;
     flex-direction: column;
 }
+
+
 
 .container{
     flex: 1;
@@ -80,85 +83,40 @@ h2 {
 --------------------
 */
 .about-me {
-    height: 100vh;
+    margin: 10vh 0;
 }
 .about-me-disp {
-    display: flex;
-    margin: 4em 0 0 0 ;
+    margin: 20vh 10vw;
+    gap: 10%;
+    display: grid;
     align-items: center;
+    text-align: right;
+    grid-template-columns: 35% 55%;
 }
-
-.pic {
-    margin: 0 2em;
-    max-width: 33%;
-    height: 100%;
+.about-me-disp img{
+    width: 100%;
 }
 .bio {
-    margin: 5em 2em 0 2em ;
+    display: flex;
+    flex-direction: column;
 }
 .bio p{
-    font-size: 2em;
+    font-size: 1.9em;
 }
-.misc {
-    display: grid;
-    grid-template-columns: 33% 33% 33%;
-    justify-content: center;
-    margin: 0 0 0 2em;
+.media-list{
+    margin-top: 4em;
 }
-.misc .card {
-    margin: 0 2em;
-}
-.misc .card .slide{
+.media-list a {
     border-radius: 1em;
-    width: 100%;
-    height: 150px;
-    transition: 0.5s;
-}
-.misc .card .slide.slide1 {
-    color: white;
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 1;
-    transition: .7s;
-    transform: translateY(75px);
-    background: #000000;
-    box-shadow: 0 5px 10px rgba(0,0,0,0.3);
-}
-.misc .card:hover .slide.slide1{
-    border-radius: 1em 1em 0 0;
-    transform: translateY(0px);
-}
-.misc .card .slide.slide2 {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 20px;
-    box-sizing: border-box;
-    transition: .8s;
-    transform: translateY(-75px);
-    background-color: white;
-}
-.misc .card:hover .slide.slide2{
-    border-radius: 0 0 1em 1em;
-    transform: translateY(0);
-    box-shadow: 0 5px 10px rgba(0,0,0,0.4);
-}
-.content {
-    text-align: center;
-}
-.content h2{
-    margin: 0;
-}
-.content a{
-    text-decoration: none;
+    padding: 1em;
     color: black;
-    font-weight: 700;
+    font-size: 1.2em;
+    text-decoration: none;
+    transition: 0.5s ease-in-out;
 }
-.content a:hover {
-    text-decoration: underline;
+.media-list a:hover {
+    background-color: #000000cb;
+    color: white;
 }
 /*
 --------------------
@@ -168,7 +126,6 @@ h2 {
 .skills {
     align-items: center;
 }
-
 .logos-container {
     margin: 2em 0;
     display: inline-grid;
@@ -181,13 +138,71 @@ h2 {
     max-width: 50%;
     max-height: 50%;
 }
+
+/*
+---------
+Projects
+---------
+*/
+.projects {
+    background-color: #000000cb;
+}
+.projects h2{
+    color: white;
+}
+.projects hr{
+    border: 1px solid white;
+}
+.projects-container {
+    padding: 3em;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+}
+.slide {
+    text-align: center;
+    width: 200px;
+    transition: 0.5s;
+    border-radius: 1em;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 800;
+    font-style: normal;
+    font-size: 1.3em;
+}
+.slide1 {
+    height: 100px;
+    background-color: white;
+    z-index: 1;
+    transition: .7s;
+    border-radius: 1em;
+    transform: translateY(25px);
+}
+.card:hover .slide.slide1{
+    transform: translateY(0px);
+    border-radius: 1em 1em 0 0;
+}
+.slide2 {
+    height: 50px;
+    background-color: black;
+    padding: 20px;
+    transition: .8s;
+    transform: translateY(-25px);
+    box-shadow: 0 20px 40px rgba(0,0,0,1);
+}
+.card:hover .slide.slide2{
+    transform: translateY(0px);
+    border-radius: 0 0 1em 1em;
+}
 /*
 --------------------
     Footer
 --------------------
 */
 .ft hr {
-    height: 1px;
+    border: 1px solid white;
 }
 .ft h3 {
     margin: 1em;
@@ -216,6 +231,7 @@ footer a {
 }
 
 
+
 /*
 ---------
 Media queries
@@ -223,15 +239,23 @@ Media queries
 */
 
 
-
-
 /* Extra small devices (phones, 600px and down) */
-@media only screen and (max-width: 600px) {...}
+@media only screen and (max-width: 600px) {
+
+}
 /* Small devices (portrait tablets and large phones, 600px and up) */
-@media only screen and (min-width: 600px) {...}
+@media only screen and (min-width: 600px) {
+
+}
 /* Medium devices (landscape tablets, 768px and up) */
-@media only screen and (min-width: 768px) {...}
+@media only screen and (min-width: 768px) {
+
+}
 /* Large devices (laptops/desktops, 992px and up) */
-@media only screen and (min-width: 992px) {...}
+@media only screen and (min-width: 992px) {
+
+}
 /* Extra large devices (large laptops and desktops, 1200px and up) */
-@media only screen and (min-width: 1200px) {...}
+@media only screen and (min-width: 1200px) {
+
+}
