@@ -115,10 +115,6 @@ h2 {
     text-decoration: none;
     transition: 0.5s ease-in-out;
 }
-.media-list a:hover {
-    background-color: #000000cb;
-    color: white;
-}
 /*
 --------------------
     Skills
@@ -271,7 +267,7 @@ Media queries
         margin-top: 4em;
     }
     .media-list a {
-        padding: 0;
+        padding: 1em;
     }
 
     /*
@@ -359,5 +355,11 @@ Media queries
     .media-list a {
         font-size: 1.75em;
         padding: 0;
+    }
+}
+@media only screen and (min-width: 1200px){
+    .media-list a:hover {
+        background-color: #000000cb;
+        color: white;
     }
 }
