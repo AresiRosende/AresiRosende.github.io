@@ -26,6 +26,7 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    text-overflow: clip;
 }
 
 body{
@@ -260,9 +261,14 @@ Media queries
     */
     .about-me-disp{
         grid-template-columns: 100%;
+        gap: 5%;
     }
     .bio p{
+        font-size: 1.5em;
         text-align: center;
+    }
+    .media-list{
+        margin-top: 4em;
     }
     .media-list a {
         padding: 0;
