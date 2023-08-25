@@ -170,6 +170,7 @@ Projects
     font-size: 1.3em;
 }
 .slide1 {
+    color: rgb(124, 124, 124);
     height: 100px;
     background-color: white;
     z-index: 1;
@@ -183,7 +184,7 @@ Projects
 }
 .slide2 {
     height: 50px;
-    background-color: black;
+    background-color: rgb(124, 124, 124);
     padding: 20px;
     transition: .8s;
     transform: translateY(-25px);
